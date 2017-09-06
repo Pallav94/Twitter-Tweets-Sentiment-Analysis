@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Train Machine</title>
+	<style>
+		a,h1{
+			font-family: Helvetica Neue;
+			color: white;
+		}
+		#train{
+			font-family: Helvetica Neue;
+			color: white;
+		}
+	</style>
+	<script>
+	function verify(){
+		var name=document.getElementById("upload").value;
+		if(name==""){
+			alert("Upload Data !!!");
+			return false;
+		}
+	}
+	</script>
+</head>
+<body style="background-color:#1DA1F2;">
+	<span style="position: absolute; top: 5pt; left: 5pt;"><a href="FinalFrame.html" 
+	style="text-decoration:none;color:white;font-family:Helvetica Neue;" target="_parent"><b>Home</b></a></span>
+	<h1 align="center">TRAINING SYSTEM</h1>
+	<div align="center">
+		
+	<form action="TrainMachine" method="post" id=train onsubmit="return verify()">	
+		<label><b>Category:</b></label>
+		<select name="category">  
+			<option>Ham</option>
+			<option>Spam</option>
+		</select><br>
+		
+		<textarea rows="18" cols="150" name="sampleData" id="upload"></textarea>
+		<br><br>
+		<label><b>Upload Training Data:</b></label>
+		<input type="Submit" value=Upload ><br><br><br><br>
+		
+	</form>		
+		
+		<div style="word-spacing: 50px;">
+			<a href="HamWords.jsp" style="text-decoration:none;"><b>PositiveWords</b></a>
+		    <a href="SpamWords.jsp" style="text-decoration:none;"><b>NegativeWords</b></a>
+			<a href="TotalMail.jsp" style="text-decoration:none;"><b>TotalTweets</b></a>
+		</div>
+		
+	</div>
+</body>
+</html>
